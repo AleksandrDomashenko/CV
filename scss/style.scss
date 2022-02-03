@@ -1,0 +1,222 @@
+//подключение шрифтов
+
+//нулевой стиль
+@import 'nulestyle.scss';
+//файл с миксинами
+@import 'mixin.scss';
+////////////////////////////////////////
+body {
+  overflow-x: hidden;
+}
+// wrapper
+.wrapper {
+  min-height: 100vh;
+  @include flex(flex, column, none, none);
+}
+// header
+.content {
+  flex: 1 1 auto;
+}
+
+.container {
+  min-width: 100vw;
+}
+
+.header {
+  &__list {
+    @include flex(flex, none, space-around, center);
+    @include font(18px, 22px, none, #000, 700);
+    margin-top: 30px;
+    width: 70vw;
+    margin: 30px auto 0 auto;
+  }
+
+  &__link {
+    &:first-child {
+      a {
+        color: #000;
+      }
+    }
+    a {
+      color: #828282;
+      display: inline-block;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: #000;
+        transform: scale(1.5, 1.5);
+        text-shadow: 0px 0px 3px #828282;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+  &__line {
+    height: 2px;
+    background-color: #000;
+    margin: 15px auto;
+  }
+}
+
+// first frame
+.first-frame {
+  &__row {
+    @include flex(flex, none, space-around, center);
+  }
+  &__column {
+    &:first-child {
+      p {
+        @include font(47px, 59px, none, #070707, 700);
+      }
+    }
+    &:nth-child(2) {
+      p {
+        @include font(18px, 22px, none, #070707, none);
+      }
+    }
+    &:last-child {
+      img {
+        width: 15vw;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// second frame
+.second-frame {
+  margin-top: 50px;
+  background-color: #f6f6f6;
+  @include flex(flex, column, center, center);
+  text-align: center;
+  &__title {
+    margin: 100px 0 50px 0;
+  }
+
+  &__subtitle {
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-bottom: 35px;
+    }
+  }
+}
+.title {
+  @include font(34px, 42px, none, #070707, 700);
+}
+.subtitle {
+  @include font(18px, 22px, none, #070707, none);
+}
+
+// three frame
+.threeth-frame {
+  background-color: #f6f6f6;
+  @include flex(flex, column, center, center);
+  text-align: center;
+  &__title {
+    margin: 35px 0 50px 0;
+  }
+
+  &__subtitle {
+    &:nth-child(3) {
+      margin-bottom: 25px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding-bottom: 100px;
+    @include font(18px, 22px, none, #070707, none);
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// four frame
+.fourth-frame {
+  @include flex(flex, column, center, center);
+  text-align: center;
+
+  &__title {
+    padding-top: 100px;
+  }
+
+  &__subtitle {
+    &:nth-child(2),
+    &:nth-child(4) {
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+  }
+  &__row {
+    &:nth-child(3),
+    &:nth-child(5) {
+      @include flex(flex, row, space-around, center);
+      width: 80vw;
+      margin: 0 auto;
+      img {
+        width: 100px;
+        height: 100px;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          transform: scale(1.5, 1.5) rotate(360deg);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    &:nth-child(5) {
+      width: 48vw;
+      margin-bottom: 50px;
+    }
+  }
+  &__line {
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto 0 auto;
+  }
+}
+
+// five frame
+.fiveth-frame {
+  background-color: #f6f6f6;
+  &__title {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__rows {
+    height: 50vh;
+    @include flex(flex, none, space-around, center);
+    img {
+      width: 42vw;
+      box-shadow: 0px 0px 50px #000;
+      border-radius: 20px;
+      border: 3px solid #000;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05, 1.05);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  &__title {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    @include flex(flex, none, space-around, center);
+    width: 90vw;
+    margin: 0 auto 50px auto;
+  }
+}
