@@ -135,7 +135,7 @@ body {
 }
 
 .left-side {
-  width: 20vw;
+  width: 30vw;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -218,7 +218,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-left: 30px;
 }
 
@@ -389,6 +389,6 @@ body {
 }
 
 .right-side {
-  width: 80vw;
+  width: 70vw;
   border: 1px solid #000;
 }
