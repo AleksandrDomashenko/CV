@@ -247,7 +247,16 @@ body {
     }
   }
 
-  // work examples
+  &__fourth-frame {
+    margin-top: 30px;
+    padding: 0 30px;
+    .title {
+      margin-bottom: 10px;
+    }
+    .line {
+      margin-bottom: 15px;
+    }
+  }
 
   .line {
     width: 200px;

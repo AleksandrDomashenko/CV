@@ -484,6 +484,19 @@ body {
   margin-bottom: 5px;
 }
 
+.right-side__fourth-frame {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.right-side__fourth-frame .title {
+  margin-bottom: 10px;
+}
+
+.right-side__fourth-frame .line {
+  margin-bottom: 15px;
+}
+
 .right-side .line {
   width: 200px;
   height: 3px;
