@@ -135,12 +135,12 @@ body {
 }
 
 .left-side {
-  width: 30vw;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   background-color: #094e6f;
   min-height: 100vh;
+  width: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,8 +159,8 @@ body {
 .left-side__first-frame .foto img {
   display: block;
   margin: 15px auto;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 4mm ridge rgba(0, 54, 88, 0.6);
 }
@@ -170,8 +170,8 @@ body {
 }
 
 .left-side__first-frame .name p {
-  font-size: 30px;
-  line-height: 42px;
+  font-size: 18px;
+  line-height: 30px;
   letter-spacing: none;
   color: #fff;
   font-weight: 700;
@@ -200,8 +200,9 @@ body {
   letter-spacing: none;
   color: #fff;
   font-weight: 700;
-  margin-left: 30px;
-  margin-bottom: 15px;
+  padding: 5px 30px;
+  margin-bottom: 10px;
+  background-color: #00365899;
 }
 
 .left-side__first-frame .contact__link {
@@ -218,8 +219,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
-  margin-left: 30px;
+  margin-bottom: 15px;
+  padding: 0 30px;
 }
 
 .left-side__first-frame .contact__link img {
@@ -239,7 +240,7 @@ body {
 }
 
 .left-side__first-frame .contact__link a:not(:last-child) {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .left-side__first-frame .contact__link a:hover {
@@ -249,17 +250,15 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.left-side__first-frame .dbird {
-  margin-left: 30px;
-}
-
 .left-side__first-frame .dbird p:first-child {
   font-size: 15px;
   line-height: 15px;
   letter-spacing: none;
   color: #fff;
   font-weight: 700;
+  padding: 5px 30px;
   margin-bottom: 15px;
+  background-color: #00365899;
 }
 
 .left-side__first-frame .dbird p:last-child {
@@ -269,6 +268,7 @@ body {
   color: #fff;
   font-weight: 400;
   margin-bottom: 15px;
+  padding-left: 30px;
 }
 
 .left-side__first-frame .line {
@@ -300,33 +300,38 @@ body {
 }
 
 .left-side__second-frame .soft-skills__title p {
-  font-size: 25px;
-  line-height: 29px;
+  font-size: 17px;
+  line-height: 21px;
   letter-spacing: none;
   color: #fff;
   font-weight: 700;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .left-side__second-frame .soft-skills__title::before {
   content: '';
   background-image: url("../img/second_frame/02.png");
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
 }
 
 .left-side__second-frame .soft-skills__list {
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 19px;
   letter-spacing: none;
   color: #fff;
   font-weight: none;
-  margin-bottom: 15px;
+  margin: 0 0 15px 20px;
 }
 
-.left-side__second-frame .soft-skills__list p:not(:last-child) {
+.left-side__second-frame .soft-skills__list li {
+  list-style: disc;
+  padding-right: 15px;
+}
+
+.left-side__second-frame .soft-skills__list li:not(:last-child) {
   margin-bottom: 5px;
 }
 
@@ -359,36 +364,136 @@ body {
 }
 
 .left-side__second-frame .hard-skills__title p {
-  font-size: 25px;
-  line-height: 29px;
+  font-size: 17px;
+  line-height: 21px;
   letter-spacing: none;
   color: #fff;
   font-weight: 700;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .left-side__second-frame .hard-skills__title::before {
   content: '';
   background-image: url("../img/second_frame/01.png");
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   display: inline-block;
 }
 
 .left-side__second-frame .hard-skills__list {
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 15px;
+  line-height: 19px;
   letter-spacing: none;
   color: #fff;
   font-weight: none;
+  margin-left: 20px;
 }
 
-.left-side__second-frame .hard-skills__list p:not(:last-child) {
+.left-side__second-frame .hard-skills__list li {
+  list-style: disc;
+  padding-right: 15px;
+}
+
+.left-side__second-frame .hard-skills__list li:not(:last-child) {
   margin-bottom: 5px;
 }
 
 .right-side {
-  width: 70vw;
-  border: 1px solid #000;
+  width: 100%;
+}
+
+.right-side__first-frame {
+  margin: 30px 0 15px 0px;
+  padding: 0 30px;
+}
+
+.right-side__first-frame .title {
+  margin-bottom: 10px;
+}
+
+.right-side__first-frame .line {
+  margin-bottom: 15px;
+}
+
+.right-side__first-frame .subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: none;
+  color: none;
+  font-weight: none;
+  margin-bottom: 30px;
+}
+
+.right-side__second-frame {
+  margin-bottom: 15px;
+  padding: 0 30px;
+}
+
+.right-side__second-frame .title {
+  margin-bottom: 10px;
+}
+
+.right-side__second-frame .line {
+  margin-bottom: 15px;
+}
+
+.right-side__second-frame .last-ed {
+  margin-bottom: 15px;
+}
+
+.right-side__second-frame .last-ed__years, .right-side__second-frame .last-ed__names,
+.right-side__second-frame .first-ed__years,
+.right-side__second-frame .first-ed__names {
+  margin-bottom: 5px;
+}
+
+.right-side__second-frame .last-ed__years, .right-side__second-frame .last-ed__names, .right-side__second-frame .last-ed__direction,
+.right-side__second-frame .first-ed__years,
+.right-side__second-frame .first-ed__names,
+.right-side__second-frame .first-ed__direction {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: none;
+  color: none;
+  font-weight: none;
+}
+
+.right-side__threeth-frame {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.right-side__threeth-frame .title {
+  margin-bottom: 10px;
+}
+
+.right-side__threeth-frame .line {
+  margin-bottom: 15px;
+}
+
+.right-side__threeth-frame .last-ex__years, .right-side__threeth-frame .last-ex__company, .right-side__threeth-frame .last-ex__position {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: none;
+  color: none;
+  font-weight: none;
+}
+
+.right-side__threeth-frame .last-ex__years, .right-side__threeth-frame .last-ex__company {
+  margin-bottom: 5px;
+}
+
+.right-side .line {
+  width: 200px;
+  height: 3px;
+  background-color: #003658;
+}
+
+.right-side .title {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  color: none;
+  font-weight: 700;
 }
