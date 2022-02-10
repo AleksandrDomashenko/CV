@@ -310,7 +310,7 @@ body {
 
 .left-side__second-frame .soft-skills__title::before {
   content: '';
-  background-image: url("../img/second_frame/02.png");
+  background-image: url("../img/ls-second_frame/02.png");
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -374,7 +374,7 @@ body {
 
 .left-side__second-frame .hard-skills__title::before {
   content: '';
-  background-image: url("../img/second_frame/01.png");
+  background-image: url("../img/ls-second_frame/01.png");
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
@@ -495,6 +495,69 @@ body {
 
 .right-side__fourth-frame .line {
   margin-bottom: 15px;
+}
+
+.right-side__fourth-frame .examples {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right-side__fourth-frame .examples div {
+  text-align: center;
+}
+
+.right-side__fourth-frame .examples p {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: none;
+  color: none;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.right-side__fourth-frame .examples img {
+  display: block;
+  border: 3px solid #094e6f;
+  border-radius: 10% 3% 50% 3%;
+  width: 320px;
+  height: 180px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.right-side__fourth-frame .examples img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  border-radius: initial;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: -3px 3px 5px #003658;
+          box-shadow: -3px 3px 5px #003658;
+}
+
+.right-side__fourth-frame .examples img:active {
+  position: relative;
+  -webkit-box-shadow: initial;
+          box-shadow: initial;
+  top: 3px;
+  left: -3px;
+  -webkit-transition: initial;
+  transition: initial;
 }
 
 .right-side .line {
