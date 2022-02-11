@@ -126,9 +126,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -176,9 +176,8 @@ body {
 
 @media (max-width: 767px) {
   .left-side {
-    position: static;
     width: 100%;
-    min-height: auto;
+    min-height: 100vh;
   }
 }
 
@@ -795,7 +794,7 @@ body {
 }
 
 .left-side__second-frame .hard-skills__list li:last-child {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .right-side {

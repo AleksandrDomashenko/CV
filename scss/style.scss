@@ -23,7 +23,7 @@ body {
 }
 
 .main-page {
-  @include flex(flex, row, none, flex-start);
+  @include flex(flex, row, center, flex-start);
   // media query for small resolutions
   @media (max-width: 767px) {
     @include flex(flex, column, none, flex-start);
@@ -39,9 +39,11 @@ body {
   width: 28%;
   // media query for small resolutions
   @media (max-width: 767px) {
-    position: static;
+    // position: static;
     width: 100%;
-    min-height: auto;
+    min-height: 100vh;
+  }
+  @media (max-width: 1650px) {
   }
   @include flex(flex, column, flex-start, left);
   &__first-frame {
@@ -345,11 +347,12 @@ body {
         li {
           list-style: disc;
           padding-right: 15px;
+
           &:not(:last-child) {
             margin-bottom: 5px;
           }
           &:last-child {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
           }
         }
       }
