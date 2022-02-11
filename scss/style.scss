@@ -24,8 +24,8 @@ body {
 
 .main-page {
   @include flex(flex, row, none, flex-start);
-  @media (max-width: 1365px) {
-    //change!!!!!!!!!
+  // media query for small resolutions
+  @media (max-width: 767px) {
     @include flex(flex, column, none, flex-start);
   }
 }
@@ -33,14 +33,16 @@ body {
 .left-side {
   position: -webkit-sticky;
   position: sticky;
-  @media (max-width: 1365px) {
-    position: static;
-    width: 100%;
-  }
   top: 0px;
   background-color: #094e6f;
   min-height: 100vh;
   width: 28%;
+  // media query for small resolutions
+  @media (max-width: 767px) {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
   @include flex(flex, column, flex-start, left);
   &__first-frame {
     .foto {
@@ -51,6 +53,7 @@ body {
         height: 150px;
         border-radius: 50%;
         border: 4mm groove rgba(0, 54, 88, 0.6);
+        // media query for large resolutions
         @media (min-width: 2250px) {
           width: 250px;
           height: 250px;
@@ -63,12 +66,22 @@ body {
           width: 350px;
           height: 350px;
         }
+        // media query for small resolutions
+        @media (max-width: 767px) {
+          width: 300px;
+          height: 300px;
+        }
+        @media (max-width: 480px) {
+          width: 250px;
+          height: 250px;
+        }
       }
     }
     .name {
       p {
         @include font(18px, 30px, none, #fff, 700);
         text-align: center;
+        // media query for large resolutions
         @media (min-width: 2250px) {
           @include font(22px, 34px, none, #fff, 700);
         }
@@ -89,6 +102,7 @@ body {
         padding: 5px 30px;
         margin-bottom: 10px;
         background-color: #00365899;
+        // media query for large resolutions
         @media (min-width: 2250px) {
           @include font(22px, 34px, none, #fff, 700);
           padding: 7px 30px;
@@ -107,13 +121,13 @@ body {
       }
       &__link {
         @include flex(flex, row, center, center);
-        // flex-wrap: wrap; media query
         margin-bottom: 15px;
         padding: 0 30px;
         img {
           border: 0px solid #000;
           width: 35px;
           height: 35px;
+          // media query for large resolutions
           @media (min-width: 2250px) {
             width: 50px;
             height: 50px;
@@ -125,6 +139,23 @@ body {
           @media (min-width: 3000px) {
             width: 80px;
             height: 80px;
+          }
+          // media query for small resolutions
+          @media (max-width: 1365px) {
+            width: 20px;
+            height: 20px;
+          }
+          @media (max-width: 910px) {
+            width: 15px;
+            height: 15px;
+          }
+          @media (max-width: 767px) {
+            width: 35px;
+            height: 35px;
+          }
+          @media (max-width: 480px) {
+            width: 25px;
+            height: 25px;
           }
           border-radius: 0%;
           margin-top: 0;
@@ -150,6 +181,7 @@ body {
           padding: 5px 30px;
           margin-bottom: 15px;
           background-color: #00365899;
+          // media query for large resolutions
           @media (min-width: 2250px) {
             @include font(22px, 19px, none, #fff, 700);
             padding: 7px 30px;
@@ -167,6 +199,7 @@ body {
           @include font(13px, 15px, none, #fff, 400);
           margin-bottom: 15px;
           padding-left: 30px;
+          // media query for large resolutions
           @media (min-width: 2250px) {
             @include font(17px, 19px, none, #fff, 400);
           }
@@ -185,6 +218,7 @@ body {
       margin: 0 auto 15px auto;
       height: 5px;
       background-color: #003658;
+      // media query for large resolutions
       @media (min-width: 2250px) {
         height: 7px;
       }
@@ -205,6 +239,7 @@ body {
         p {
           @include font(17px, 21px, none, #fff, 700);
           padding: 0 15px;
+          // media query for large resolutions
           @media (min-width: 2250px) {
             @include font(21px, 25px, none, #fff, 700);
           }
@@ -226,6 +261,7 @@ body {
         }
       }
       &__list {
+        // media query for large resolutions
         @include font(15px, 19px, none, #fff, none);
         @media (min-width: 2250px) {
           @include font(19px, 24px, none, #fff, none);
@@ -252,6 +288,7 @@ body {
       margin: 0 auto 15px auto;
       height: 5px;
       background-color: #003658;
+      // media query for large resolutions
       @media (min-width: 2250px) {
         height: 7px;
       }
@@ -270,6 +307,7 @@ body {
         p {
           @include font(17px, 21px, none, #fff, 700);
           padding: 0 15px;
+          // media query for large resolutions
           @media (min-width: 2250px) {
             @include font(21px, 25px, none, #fff, 700);
           }
@@ -292,6 +330,7 @@ body {
       }
       &__list {
         @include font(15px, 19px, none, #fff, none);
+        // media query for large resolutions
         @media (min-width: 2250px) {
           @include font(19px, 24px, none, #fff, none);
         }
@@ -308,6 +347,9 @@ body {
           padding-right: 15px;
           &:not(:last-child) {
             margin-bottom: 5px;
+          }
+          &:last-child {
+            margin-bottom: 15px;
           }
         }
       }
@@ -327,6 +369,7 @@ body {
       margin-bottom: 15px;
     }
     .subtitle {
+      // media query for large resolutions
       @include font(18px, 22px, none, none, none);
       @media (min-width: 2250px) {
         @include font(22px, 26px, none, none, none);
@@ -361,6 +404,7 @@ body {
       &__years,
       &__names,
       &__direction {
+        // media query for large resolutions
         @include font(16px, 20px, none, none, none);
         @media (min-width: 2250px) {
           @include font(20px, 24px, none, none, none);
@@ -388,6 +432,7 @@ body {
       &__years,
       &__company,
       &__position {
+        // media query for large resolutions
         @include font(16px, 20px, none, none, none);
         @media (min-width: 2250px) {
           @include font(20px, 24px, none, none, none);
@@ -417,9 +462,9 @@ body {
     }
     .examples {
       @include flex(flex, none, space-between, center);
-
+      // media query for small resolutions
       @media (max-width: 1650px) {
-        @include flex(flex, row, space-between, center);
+        @include flex(flex, row, center, center);
         flex-wrap: wrap;
       }
       div {
@@ -429,6 +474,7 @@ body {
       p {
         @include font(16px, 20px, none, none, 700);
         margin-bottom: 10px;
+        // media query for large resolutions
         @media (min-width: 2250px) {
           @include font(20px, 24px, none, none, 700);
         }
@@ -442,7 +488,7 @@ body {
       img {
         display: block;
         border: 3px solid #094e6f;
-        border-radius: 10% 3% 50% 3%;
+        border-radius: 10% 3% 30% 3%;
         width: 100%;
         height: 100%;
         margin-bottom: 30px;
@@ -463,7 +509,11 @@ body {
         @media (max-width: 1650px) {
           width: 380px;
           height: 240px;
-          margin-bottom: 20px;
+        }
+        @media (max-width: 480px) {
+          width: 260px;
+          height: 150px;
+          margin-bottom: 30px;
         }
         filter: grayscale(1);
         transition: all 0.25s ease-in-out;
@@ -489,15 +539,16 @@ body {
     width: 200px;
     height: 3px;
     background-color: #003658;
+    // media query for large resolutions
     @media (min-width: 2250px) {
       width: 300px;
       height: 4px;
     }
-    @media (min-width: 2250px) {
+    @media (min-width: 2500px) {
       width: 340px;
       height: 6px;
     }
-    @media (min-width: 2250px) {
+    @media (min-width: 3000px) {
       width: 380px;
       height: 8px;
     }
@@ -505,6 +556,7 @@ body {
 
   .title {
     @include font(20px, 24px, 0.1em, none, 700);
+    // media query for large resolutions
     @media (min-width: 2250px) {
       @include font(24px, 28px, 0.2em, none, 700);
     }
