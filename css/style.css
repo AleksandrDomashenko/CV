@@ -405,8 +405,8 @@ body {
 
 @media (max-width: 480px) {
   .left-side__first-frame .contact__link img {
-    width: 25px;
-    height: 25px;
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -1077,8 +1077,8 @@ body {
 
 .right-side__fourth-frame .examples img {
   display: block;
-  border: 3px solid #094e6f;
-  border-radius: 10% 3% 30% 3%;
+  border: 1px solid #094e6f;
+  border-radius: 10%;
   width: 100%;
   height: 100%;
   margin-bottom: 30px;
@@ -1129,7 +1129,6 @@ body {
           filter: grayscale(0);
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
-  border-radius: initial;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   -webkit-box-shadow: -3px 3px 5px #003658;
