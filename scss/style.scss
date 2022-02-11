@@ -24,11 +24,19 @@ body {
 
 .main-page {
   @include flex(flex, row, none, flex-start);
+  @media (max-width: 1365px) {
+    //change!!!!!!!!!
+    @include flex(flex, column, none, flex-start);
+  }
 }
 
 .left-side {
   position: -webkit-sticky;
   position: sticky;
+  @media (max-width: 1365px) {
+    position: static;
+    width: 100%;
+  }
   top: 0px;
   background-color: #094e6f;
   min-height: 100vh;
@@ -42,13 +50,34 @@ body {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 4mm ridge rgba(0, 54, 88, 0.6);
+        border: 4mm groove rgba(0, 54, 88, 0.6);
+        @media (min-width: 2250px) {
+          width: 250px;
+          height: 250px;
+        }
+        @media (min-width: 2500px) {
+          width: 300px;
+          height: 300px;
+        }
+        @media (min-width: 3000px) {
+          width: 350px;
+          height: 350px;
+        }
       }
     }
     .name {
       p {
         @include font(18px, 30px, none, #fff, 700);
         text-align: center;
+        @media (min-width: 2250px) {
+          @include font(22px, 34px, none, #fff, 700);
+        }
+        @media (min-width: 2500px) {
+          @include font(26px, 38px, none, #fff, 700);
+        }
+        @media (min-width: 3000px) {
+          @include font(30px, 42px, none, #fff, 700);
+        }
       }
       margin-bottom: 15px;
     }
@@ -60,9 +89,24 @@ body {
         padding: 5px 30px;
         margin-bottom: 10px;
         background-color: #00365899;
+        @media (min-width: 2250px) {
+          @include font(22px, 34px, none, #fff, 700);
+          padding: 7px 30px;
+          margin-bottom: 12px;
+        }
+        @media (min-width: 2500px) {
+          @include font(26px, 38px, none, #fff, 700);
+          padding: 9px 30px;
+          margin-bottom: 14px;
+        }
+        @media (min-width: 3000px) {
+          @include font(30px, 42px, none, #fff, 700);
+          padding: 11px 30px;
+          margin-bottom: 16px;
+        }
       }
       &__link {
-        @include flex(flex, row, left, center);
+        @include flex(flex, row, center, center);
         // flex-wrap: wrap; media query
         margin-bottom: 15px;
         padding: 0 30px;
@@ -70,6 +114,18 @@ body {
           border: 0px solid #000;
           width: 35px;
           height: 35px;
+          @media (min-width: 2250px) {
+            width: 50px;
+            height: 50px;
+          }
+          @media (min-width: 2500px) {
+            width: 65px;
+            height: 65px;
+          }
+          @media (min-width: 3000px) {
+            width: 80px;
+            height: 80px;
+          }
           border-radius: 0%;
           margin-top: 0;
           margin-bottom: 0;
@@ -94,11 +150,32 @@ body {
           padding: 5px 30px;
           margin-bottom: 15px;
           background-color: #00365899;
+          @media (min-width: 2250px) {
+            @include font(22px, 19px, none, #fff, 700);
+            padding: 7px 30px;
+          }
+          @media (min-width: 2500px) {
+            @include font(26px, 23px, none, #fff, 700);
+            padding: 9px 30px;
+          }
+          @media (min-width: 3000px) {
+            @include font(30px, 27px, none, #fff, 700);
+            padding: 11px 30px;
+          }
         }
         &:last-child {
           @include font(13px, 15px, none, #fff, 400);
           margin-bottom: 15px;
           padding-left: 30px;
+          @media (min-width: 2250px) {
+            @include font(17px, 19px, none, #fff, 400);
+          }
+          @media (min-width: 2500px) {
+            @include font(21px, 23px, none, #fff, 400);
+          }
+          @media (min-width: 3000px) {
+            @include font(25px, 27px, none, #fff, 400);
+          }
         }
       }
     }
@@ -108,6 +185,15 @@ body {
       margin: 0 auto 15px auto;
       height: 5px;
       background-color: #003658;
+      @media (min-width: 2250px) {
+        height: 7px;
+      }
+      @media (min-width: 2500px) {
+        height: 9px;
+      }
+      @media (min-width: 3000px) {
+        height: 11px;
+      }
     }
   }
 
@@ -119,6 +205,15 @@ body {
         p {
           @include font(17px, 21px, none, #fff, 700);
           padding: 0 15px;
+          @media (min-width: 2250px) {
+            @include font(21px, 25px, none, #fff, 700);
+          }
+          @media (min-width: 2500px) {
+            @include font(25px, 29px, none, #fff, 700);
+          }
+          @media (min-width: 3000px) {
+            @include font(29px, 33px, none, #fff, 700);
+          }
         }
         margin-bottom: 15px;
         &::before {
@@ -132,6 +227,15 @@ body {
       }
       &__list {
         @include font(15px, 19px, none, #fff, none);
+        @media (min-width: 2250px) {
+          @include font(19px, 24px, none, #fff, none);
+        }
+        @media (min-width: 2500px) {
+          @include font(23px, 28px, none, #fff, none);
+        }
+        @media (min-width: 3000px) {
+          @include font(27px, 32px, none, #fff, none);
+        }
         margin: 0 0 15px 20px;
         li {
           list-style: disc;
@@ -148,6 +252,15 @@ body {
       margin: 0 auto 15px auto;
       height: 5px;
       background-color: #003658;
+      @media (min-width: 2250px) {
+        height: 7px;
+      }
+      @media (min-width: 2500px) {
+        height: 9px;
+      }
+      @media (min-width: 3000px) {
+        height: 11px;
+      }
     }
 
     .hard-skills {
@@ -157,6 +270,15 @@ body {
         p {
           @include font(17px, 21px, none, #fff, 700);
           padding: 0 15px;
+          @media (min-width: 2250px) {
+            @include font(21px, 25px, none, #fff, 700);
+          }
+          @media (min-width: 2500px) {
+            @include font(25px, 29px, none, #fff, 700);
+          }
+          @media (min-width: 3000px) {
+            @include font(29px, 33px, none, #fff, 700);
+          }
         }
         margin-bottom: 15px;
         &::before {
@@ -170,7 +292,17 @@ body {
       }
       &__list {
         @include font(15px, 19px, none, #fff, none);
+        @media (min-width: 2250px) {
+          @include font(19px, 24px, none, #fff, none);
+        }
+        @media (min-width: 2500px) {
+          @include font(23px, 28px, none, #fff, none);
+        }
+        @media (min-width: 3000px) {
+          @include font(27px, 32px, none, #fff, none);
+        }
         margin-left: 20px;
+
         li {
           list-style: disc;
           padding-right: 15px;
@@ -196,6 +328,15 @@ body {
     }
     .subtitle {
       @include font(18px, 22px, none, none, none);
+      @media (min-width: 2250px) {
+        @include font(22px, 26px, none, none, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(26px, 30px, none, none, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(30px, 34px, none, none, none);
+      }
       margin-bottom: 30px;
     }
   }
@@ -221,6 +362,15 @@ body {
       &__names,
       &__direction {
         @include font(16px, 20px, none, none, none);
+        @media (min-width: 2250px) {
+          @include font(20px, 24px, none, none, none);
+        }
+        @media (min-width: 2500px) {
+          @include font(24px, 28px, none, none, none);
+        }
+        @media (min-width: 3000px) {
+          @include font(28px, 32px, none, none, none);
+        }
       }
     }
   }
@@ -239,6 +389,15 @@ body {
       &__company,
       &__position {
         @include font(16px, 20px, none, none, none);
+        @media (min-width: 2250px) {
+          @include font(20px, 24px, none, none, none);
+        }
+        @media (min-width: 2500px) {
+          @include font(24px, 28px, none, none, none);
+        }
+        @media (min-width: 3000px) {
+          @include font(28px, 32px, none, none, none);
+        }
       }
       &__years,
       &__company {
@@ -258,19 +417,54 @@ body {
     }
     .examples {
       @include flex(flex, none, space-between, center);
+
+      @media (max-width: 1650px) {
+        @include flex(flex, row, space-between, center);
+        flex-wrap: wrap;
+      }
       div {
         text-align: center;
+        padding: 0 20px;
       }
       p {
         @include font(16px, 20px, none, none, 700);
         margin-bottom: 10px;
+        @media (min-width: 2250px) {
+          @include font(20px, 24px, none, none, 700);
+        }
+        @media (min-width: 2500px) {
+          @include font(24px, 28px, none, none, 700);
+        }
+        @media (min-width: 3000px) {
+          @include font(28px, 32px, none, none, 700);
+        }
       }
       img {
         display: block;
         border: 3px solid #094e6f;
         border-radius: 10% 3% 50% 3%;
-        width: 320px;
-        height: 180px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30px;
+        // media query for large resolutions
+        @media (min-width: 2250px) {
+          width: 400px;
+          height: 260px;
+        }
+        @media (min-width: 2500px) {
+          width: 430px;
+          height: 290px;
+        }
+        @media (min-width: 3000px) {
+          width: 460px;
+          height: 320px;
+        }
+        // media query for small resolutions
+        @media (max-width: 1650px) {
+          width: 380px;
+          height: 240px;
+          margin-bottom: 20px;
+        }
         filter: grayscale(1);
         transition: all 0.25s ease-in-out;
         &:hover {
@@ -295,9 +489,30 @@ body {
     width: 200px;
     height: 3px;
     background-color: #003658;
+    @media (min-width: 2250px) {
+      width: 300px;
+      height: 4px;
+    }
+    @media (min-width: 2250px) {
+      width: 340px;
+      height: 6px;
+    }
+    @media (min-width: 2250px) {
+      width: 380px;
+      height: 8px;
+    }
   }
 
   .title {
     @include font(20px, 24px, 0.1em, none, 700);
+    @media (min-width: 2250px) {
+      @include font(24px, 28px, 0.2em, none, 700);
+    }
+    @media (min-width: 2500px) {
+      @include font(28px, 32px, 0.25em, none, 700);
+    }
+    @media (min-width: 3000px) {
+      @include font(32px, 36px, 0.3em, none, 700);
+    }
   }
 }
