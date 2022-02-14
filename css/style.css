@@ -1055,7 +1055,7 @@ body {
 .right-side__fourth-frame .examples img {
   display: block;
   border: 1px solid #094e6f;
-  border-radius: 10%;
+  border-radius: 10% 5% 35% 5%;
   width: 100%;
   height: 100%;
   margin-bottom: 30px;
@@ -1110,6 +1110,7 @@ body {
   transition: all 0.4s ease-in-out;
   -webkit-box-shadow: -3px 3px 5px #003658;
           box-shadow: -3px 3px 5px #003658;
+  border-radius: 5%;
 }
 
 .right-side__fourth-frame .examples img:active {
