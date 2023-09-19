@@ -1,9 +1,9 @@
 //подключение шрифтов
 
 //нулевой стиль
-@import 'nulestyle.scss';
+@import "nulestyle.scss";
 //файл с миксинами
-@import 'mixin.scss';
+@import "mixin.scss";
 ////////////////////////////////////////
 body {
   overflow-x: hidden;
@@ -33,15 +33,15 @@ body {
   @media (max-width: 767px) {
     width: 100%;
   }
-  &__first-frame {
-    .foto {
+  .left-side-first-frame {
+    &__foto {
       img {
         display: block;
         margin: 15px auto;
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 4mm groove rgba(0, 54, 88, 0.6);
+        box-shadow: 0 0 15px aliceblue;
         // media query for large resolutions
         @media (min-width: 2250px) {
           width: 250px;
@@ -66,7 +66,7 @@ body {
         }
       }
     }
-    .name {
+    &__name {
       p {
         @include font(18px, 30px, none, #fff, 700);
         text-align: center;
@@ -83,9 +83,8 @@ body {
       }
       margin-bottom: 15px;
     }
-    .contact {
+    &__contact {
       @include flex(flex, column, center, left);
-
       p {
         @include font(15px, 15px, none, #fff, 700);
         padding: 5px 30px;
@@ -108,62 +107,62 @@ body {
           margin-bottom: 16px;
         }
       }
-      &__link {
-        @include flex(flex, row, center, center);
-        margin-bottom: 15px;
-        padding: 0 30px;
-        img {
-          border: 0px solid #000;
+    }
+    &__link {
+      @include flex(flex, row, center, center);
+      margin-bottom: 15px;
+      padding: 0 30px;
+      img {
+        border: 0px solid #000;
+        width: 35px;
+        height: 35px;
+        // media query for large resolutions
+        @media (min-width: 2250px) {
+          width: 50px;
+          height: 50px;
+        }
+        @media (min-width: 2500px) {
+          width: 65px;
+          height: 65px;
+        }
+        @media (min-width: 3000px) {
+          width: 80px;
+          height: 80px;
+        }
+        // media query for small resolutions
+        @media (max-width: 1365px) {
+          width: 20px;
+          height: 20px;
+        }
+        @media (max-width: 910px) {
+          width: 15px;
+          height: 15px;
+        }
+        @media (max-width: 767px) {
           width: 35px;
           height: 35px;
-          // media query for large resolutions
-          @media (min-width: 2250px) {
-            width: 50px;
-            height: 50px;
-          }
-          @media (min-width: 2500px) {
-            width: 65px;
-            height: 65px;
-          }
-          @media (min-width: 3000px) {
-            width: 80px;
-            height: 80px;
-          }
-          // media query for small resolutions
-          @media (max-width: 1365px) {
-            width: 20px;
-            height: 20px;
-          }
-          @media (max-width: 910px) {
-            width: 15px;
-            height: 15px;
-          }
-          @media (max-width: 767px) {
-            width: 35px;
-            height: 35px;
-          }
-          @media (max-width: 480px) {
-            width: 28px;
-            height: 28px;
-          }
-          border-radius: 0%;
-          margin-top: 0;
-          margin-bottom: 0;
-          filter: brightness(0) invert(1);
         }
-        a {
-          transition: all 0.25s ease-in-out;
-          &:not(:last-child) {
-            margin-right: 10px;
-          }
-          &:hover {
-            transform: rotate(360deg);
-            transition: all 0.5s ease-in-out;
-          }
+        @media (max-width: 480px) {
+          width: 28px;
+          height: 28px;
+        }
+        border-radius: 0%;
+        margin-top: 0;
+        margin-bottom: 0;
+        filter: brightness(0) invert(1);
+      }
+      a {
+        transition: all 0.25s ease-in-out;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+        &:hover {
+          transform: rotate(360deg);
+          transition: all 0.5s ease-in-out;
         }
       }
     }
-    .dbird {
+    &__dbird {
       p {
         &:first-child {
           @include font(15px, 15px, none, #fff, 700);
@@ -201,8 +200,7 @@ body {
         }
       }
     }
-
-    .line {
+    &__line {
       width: 98%;
       margin: 0 auto 15px auto;
       height: 5px;
@@ -220,59 +218,58 @@ body {
     }
   }
 
-  &__second-frame {
-    .soft-skills {
+  .left-side-second-frame {
+    &__soft-skills {
       padding-left: 30px;
-      &__title {
-        @include flex(flex, none, none, center);
-        p {
-          @include font(17px, 21px, none, #fff, 700);
-          padding: 0 15px;
-          // media query for large resolutions
-          @media (min-width: 2250px) {
-            @include font(21px, 25px, none, #fff, 700);
-          }
-          @media (min-width: 2500px) {
-            @include font(25px, 29px, none, #fff, 700);
-          }
-          @media (min-width: 3000px) {
-            @include font(29px, 33px, none, #fff, 700);
-          }
-        }
-        margin-bottom: 15px;
-        &::before {
-          content: '';
-          background-image: url('../img/ls-second_frame/02.png');
-          background-repeat: no-repeat;
-          width: 35px;
-          height: 35px;
-          display: inline-block;
-        }
-      }
-      &__list {
+    }
+    &__title {
+      @include flex(flex, none, none, center);
+      p {
+        @include font(17px, 21px, none, #fff, 700);
+        padding: 0 15px;
         // media query for large resolutions
-        @include font(15px, 19px, none, #fff, none);
         @media (min-width: 2250px) {
-          @include font(19px, 24px, none, #fff, none);
+          @include font(21px, 25px, none, #fff, 700);
         }
         @media (min-width: 2500px) {
-          @include font(23px, 28px, none, #fff, none);
+          @include font(25px, 29px, none, #fff, 700);
         }
         @media (min-width: 3000px) {
-          @include font(27px, 32px, none, #fff, none);
+          @include font(29px, 33px, none, #fff, 700);
         }
-        margin: 0 0 15px 20px;
-        li {
-          list-style: disc;
-          padding-right: 15px;
-          &:not(:last-child) {
-            margin-bottom: 5px;
-          }
+      }
+      margin-bottom: 15px;
+      &::before {
+        content: "";
+        background-image: url("../img/ls-second_frame/02.png");
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+      }
+    }
+    &__list {
+      // media query for large resolutions
+      @include font(15px, 19px, none, #fff, none);
+      @media (min-width: 2250px) {
+        @include font(19px, 24px, none, #fff, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(23px, 28px, none, #fff, none);
+      }
+      @media (min-width: 3000px) {
+        @include font(27px, 32px, none, #fff, none);
+      }
+      margin: 0 0 15px 20px;
+      li {
+        list-style: disc;
+        padding-right: 15px;
+        &:not(:last-child) {
+          margin-bottom: 5px;
         }
       }
     }
-
-    .line {
+    &__line {
       width: 98%;
       margin: 0 auto 15px auto;
       height: 5px;
@@ -288,59 +285,56 @@ body {
         height: 11px;
       }
     }
-
-    .hard-skills {
+    &__hard-skills {
       padding-left: 30px;
-      &__title {
-        @include flex(flex, none, none, center);
-        p {
-          @include font(17px, 21px, none, #fff, 700);
-          padding: 0 15px;
-          // media query for large resolutions
-          @media (min-width: 2250px) {
-            @include font(21px, 25px, none, #fff, 700);
-          }
-          @media (min-width: 2500px) {
-            @include font(25px, 29px, none, #fff, 700);
-          }
-          @media (min-width: 3000px) {
-            @include font(29px, 33px, none, #fff, 700);
-          }
-        }
-        margin-bottom: 15px;
-        &::before {
-          content: '';
-          background-image: url('../img/ls-second_frame/01.png');
-          background-repeat: no-repeat;
-          width: 35px;
-          height: 35px;
-          display: inline-block;
-        }
-      }
-      &__list {
-        @include font(15px, 19px, none, #fff, none);
+    }
+    &__title {
+      @include flex(flex, none, none, center);
+      p {
+        @include font(17px, 21px, none, #fff, 700);
+        padding: 0 15px;
         // media query for large resolutions
         @media (min-width: 2250px) {
-          @include font(19px, 24px, none, #fff, none);
+          @include font(21px, 25px, none, #fff, 700);
         }
         @media (min-width: 2500px) {
-          @include font(23px, 28px, none, #fff, none);
+          @include font(25px, 29px, none, #fff, 700);
         }
         @media (min-width: 3000px) {
-          @include font(27px, 32px, none, #fff, none);
+          @include font(29px, 33px, none, #fff, 700);
         }
-        margin-left: 20px;
-
-        li {
-          list-style: disc;
-          padding-right: 15px;
-
-          &:not(:last-child) {
-            margin-bottom: 5px;
-          }
-          &:last-child {
-            margin-bottom: 10px;
-          }
+      }
+      margin-bottom: 15px;
+      &::before {
+        content: "";
+        background-image: url("../img/ls-second_frame/01.png");
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+      }
+    }
+    &__list {
+      @include font(15px, 19px, none, #fff, none);
+      // media query for large resolutions
+      @media (min-width: 2250px) {
+        @include font(19px, 24px, none, #fff, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(23px, 28px, none, #fff, none);
+      }
+      @media (min-width: 3000px) {
+        @include font(27px, 32px, none, #fff, none);
+      }
+      margin-left: 20px;
+      li {
+        list-style: disc;
+        padding-right: 15px;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:last-child {
+          margin-bottom: 10px;
         }
       }
     }
@@ -349,16 +343,16 @@ body {
 
 .right-side {
   width: 100%;
-  &__first-frame {
+  .right-side-first-frame {
     margin: 30px 0 15px 0px;
     padding: 0 30px;
-    .title {
+    &__title {
       margin-bottom: 10px;
     }
-    .line {
+    &__line {
       margin-bottom: 15px;
     }
-    .subtitle {
+    &__subtitle {
       // media query for large resolutions
       @include font(18px, 22px, none, none, none);
       @media (min-width: 2250px) {
@@ -373,84 +367,82 @@ body {
       margin-bottom: 30px;
     }
   }
-  &__second-frame {
+  .right-side-second-frame {
     margin-bottom: 15px;
     padding: 0 30px;
-    .title {
+    &__title {
       margin-bottom: 10px;
     }
-    .line {
+    &__line {
       margin-bottom: 15px;
     }
-    .last-ed {
+    &__last-ed {
       margin-bottom: 15px;
     }
-    .last-ed,
-    .first-ed {
-      &__years,
-      &__names {
-        margin-bottom: 5px;
+    &__years,
+    &__names {
+      margin-bottom: 5px;
+    }
+    &__years,
+    &__names,
+    &__direction {
+      // media query for large resolutions
+      @include font(16px, 20px, none, none, none);
+      @media (min-width: 2250px) {
+        @include font(20px, 24px, none, none, none);
       }
-      &__years,
-      &__names,
-      &__direction {
-        // media query for large resolutions
-        @include font(16px, 20px, none, none, none);
-        @media (min-width: 2250px) {
-          @include font(20px, 24px, none, none, none);
-        }
-        @media (min-width: 2500px) {
-          @include font(24px, 28px, none, none, none);
-        }
-        @media (min-width: 3000px) {
-          @include font(28px, 32px, none, none, none);
-        }
+      @media (min-width: 2500px) {
+        @include font(24px, 28px, none, none, none);
+      }
+      @media (min-width: 3000px) {
+        @include font(28px, 32px, none, none, none);
       }
     }
   }
 
-  &__threeth-frame {
+  .right-side-threeth-frame {
     margin-top: 30px;
     padding: 0 30px;
-    .title {
+    &__last-ex:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &__title {
       margin-bottom: 10px;
     }
-    .line {
+    &__line {
       margin-bottom: 15px;
     }
-    .last-ex {
-      &__years,
-      &__company,
-      &__position {
-        // media query for large resolutions
-        @include font(16px, 20px, none, none, none);
-        @media (min-width: 2250px) {
-          @include font(20px, 24px, none, none, none);
-        }
-        @media (min-width: 2500px) {
-          @include font(24px, 28px, none, none, none);
-        }
-        @media (min-width: 3000px) {
-          @include font(28px, 32px, none, none, none);
-        }
+    &__years,
+    &__company,
+    &__position {
+      // media query for large resolutions
+      @include font(16px, 20px, none, none, none);
+      @media (min-width: 2250px) {
+        @include font(20px, 24px, none, none, none);
       }
-      &__years,
-      &__company {
-        margin-bottom: 5px;
+      @media (min-width: 2500px) {
+        @include font(24px, 28px, none, none, none);
       }
+      @media (min-width: 3000px) {
+        @include font(28px, 32px, none, none, none);
+      }
+    }
+    &__years,
+    &__company {
+      margin-bottom: 5px;
     }
   }
 
-  &__fourth-frame {
+  .right-side-fourth-frame {
     margin-top: 30px;
     padding: 0 30px;
-    .title {
+    &__title {
       margin-bottom: 10px;
     }
-    .line {
+    &__line {
       margin-bottom: 15px;
     }
-    .examples {
+    &__examples {
       @include flex(flex, none, space-between, center);
       // media query for small resolutions
       @media (max-width: 1650px) {
@@ -459,7 +451,7 @@ body {
       }
       div {
         text-align: center;
-        padding: 0 20px;
+        padding: 0 50px;
       }
       p {
         @include font(16px, 20px, none, none, 700);
@@ -478,9 +470,7 @@ body {
       img {
         display: block;
         border: 1px solid #094e6f;
-        border-radius: 10% 5% 35% 5%;
-        width: 100%;
-        height: 100%;
+        border-radius: 30px;
         margin-bottom: 30px;
         // media query for large resolutions
         @media (min-width: 2250px) {
@@ -505,21 +495,13 @@ body {
           height: 150px;
           margin-bottom: 30px;
         }
-        filter: grayscale(1);
+        filter: grayscale(0.5);
         transition: all 0.25s ease-in-out;
         &:hover {
           filter: grayscale(0);
           transform: scale(1.05, 1.05);
           transition: all 0.4s ease-in-out;
-          box-shadow: -3px 3px 5px #003658;
-          border-radius: 5%;
-        }
-        &:active {
-          position: relative;
-          box-shadow: initial;
-          top: 3px;
-          left: -3px;
-          transition: initial;
+          box-shadow: 0px 0px 10px #003658;
         }
       }
     }
