@@ -19,7 +19,7 @@ body {
 }
 
 .main-page {
-  @include flex(flex, row, center, stretch);
+  @include flex(flex, row, center, none);
   // media query for small resolutions
   @media (max-width: 767px) {
     @include flex(flex, column, none, flex-start);
@@ -32,6 +32,7 @@ body {
   // media query for small resolutions
   @media (max-width: 767px) {
     width: 100%;
+    min-height: auto;
   }
   .left-side-first-frame {
     &__foto {
@@ -443,12 +444,8 @@ body {
       margin-bottom: 15px;
     }
     &__examples {
-      @include flex(flex, none, space-between, center);
-      // media query for small resolutions
-      @media (max-width: 1650px) {
-        @include flex(flex, row, center, center);
-        flex-wrap: wrap;
-      }
+      @include flex(flex, column, center, center);
+      flex-wrap: wrap;
       div {
         text-align: center;
         padding: 0 50px;
@@ -468,40 +465,22 @@ body {
         }
       }
       img {
-        display: block;
-        border: 1px solid #094e6f;
+        display: inline-block;
+        box-shadow: 0 0 10px #003658;
         border-radius: 30px;
         margin-bottom: 30px;
         // media query for large resolutions
-        @media (min-width: 2250px) {
-          width: 400px;
-          height: 260px;
+        width: 70%;
+        @media (max-width: 768px) {
+          width: 100%;
         }
-        @media (min-width: 2500px) {
-          width: 430px;
-          height: 290px;
-        }
-        @media (min-width: 3000px) {
-          width: 460px;
-          height: 320px;
-        }
-        // media query for small resolutions
-        @media (max-width: 1650px) {
-          width: 380px;
-          height: 240px;
-        }
-        @media (max-width: 480px) {
-          width: 260px;
-          height: 150px;
-          margin-bottom: 30px;
-        }
-        filter: grayscale(0.5);
+        
+        filter: grayscale(0.7);
         transition: all 0.25s ease-in-out;
         &:hover {
           filter: grayscale(0);
-          transform: scale(1.05, 1.05);
+          transform: scale(1.03);
           transition: all 0.4s ease-in-out;
-          box-shadow: 0px 0px 10px #003658;
         }
       }
     }
