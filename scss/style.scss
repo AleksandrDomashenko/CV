@@ -223,7 +223,7 @@ body {
     &__soft-skills {
       padding-left: 30px;
     }
-    &__title {
+    &__title-soft {
       @include flex(flex, none, none, center);
       p {
         @include font(17px, 21px, none, #fff, 700);
@@ -289,7 +289,7 @@ body {
     &__hard-skills {
       padding-left: 30px;
     }
-    &__title {
+    &__title-hard {
       @include flex(flex, none, none, center);
       p {
         @include font(17px, 21px, none, #fff, 700);
@@ -449,6 +449,9 @@ body {
       div {
         text-align: center;
         padding: 0 50px;
+        @media (max-width: 768px) {
+          padding: 0;
+        }
       }
       p {
         @include font(16px, 20px, none, none, 700);
@@ -472,7 +475,7 @@ body {
         // media query for large resolutions
         width: 70%;
         @media (max-width: 768px) {
-          width: 100%;
+          width: 80vw;
         }
         
         filter: grayscale(0.7);
